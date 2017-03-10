@@ -13,7 +13,7 @@ int main()
         for(int i = 0, c ; i < LINE_LENGTH && (c = getchar()) != '\n' ; str[indexPointer++] = c, i++)
             if(i == (LINE_LENGTH - 1))
             {
-                printf("Fehler bei der Engabe.\n");
+                printf("Fehler bei der Eingabe.\n");
                 return 1 ;
             }
     }
