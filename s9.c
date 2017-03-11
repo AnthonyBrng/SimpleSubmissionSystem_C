@@ -23,7 +23,6 @@ int main()
 
     printArray(values, "Die zu sortierenden Zahlen: ", counter - 1 );
 
-
     /*
      * Sortieren
      */
