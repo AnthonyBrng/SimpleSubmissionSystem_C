@@ -31,4 +31,3 @@ int main()
             printf("'%c':%d\n", i, counters[i]);
     }
 }
-
