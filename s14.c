@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define LEN 1000
+#define LEN 1000000
 
 void prim_del(int len, int numbers[len]);
 void prim_sieb(int len, int number[len]) ;
