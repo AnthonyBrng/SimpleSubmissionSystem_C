@@ -49,7 +49,7 @@ int datum2int(int tag, int monat)
  * @param tage
  * @param ergebnis
  */
-void int2datum(int tage, int* ergebnis)
+void int2datum(int tage, int *ergebnis)
 {
     int monate[] = {31, 28, 31, 30, 31, 30, 31,31,30, 31, 30, 31};
     int monat ;
@@ -57,7 +57,7 @@ void int2datum(int tage, int* ergebnis)
     for(monat = 0 ; tage > monate[monat] ; tage -= monate[monat++] )
         ;
 
-    ergebnis[0] = tage ;
-    ergebnis[1] = monat+1 ;
+    *ergebnis++ = tage ;
+    *ergebnis++ = monat+1 ;
 
 }
