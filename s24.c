@@ -3,16 +3,28 @@
 
 int strend(const char* s, const char* t);
 char* strrchr(const char* s, int c) ;
+char* strstr(const char* s, const char* t) ;
 
 
 int main()
 {
     char* s = "hallosal" ;
-    char* t = "ll" ;
+    char* t = "a" ;
     //printf("%d\n", strend(s, t));
 
     char c = 'a' ;
     //printf("%s\n", strrchr(s, c));
+
+    char* p = strstr(s, t) ;
+
+    if(p == NULL)
+        return 1 ;
+
+    for(int i=0; i<4 ; i++)
+        printf("%c", *(p+i));
+
+    printf("\n");
+
 
     return 0 ;
 }
@@ -52,3 +64,40 @@ char* strrchr(const char* s, int c)
 
     return result ;
 }
+
+/**
+ *
+ * @param s
+ * @param t
+ * @return
+ */
+char* strstr(const char* s, const char* t)
+{
+    char* result = NULL ;
+    const char* t_start = t ;
+    int isSet = 0 ;
+
+    while(*s && *t)
+    {
+        //printf("%c == %c\n", *s, *t);
+        if(*s == *t)
+        {
+            if(!isSet)
+            {
+                result = s ;
+                isSet = 1 ;
+            }
+            *s++, *t++ ;
+        }
+        else
+        {
+            result = NULL;
+            *s++, t = t_start ;
+        }
+    }
+
+    return result ;
+}
+
+
+
